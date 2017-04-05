@@ -27,12 +27,7 @@ import (
 	"github.com/twpayne/go-geom/encoding/wkb"
 )
 
-// ReadResponse is the entry point of this package
-// It takes in parameter the response from a gRPC call:
-//  resp, _ := c.Run(...)
-//  xd := xdgraph.ReadResponse(resp)
-//  [...]
-func ReadResponse(resp *graphp.Response) *Response {
+func readResponse(resp *graphp.Response) *Response {
 	return &Response{
 		nodes: []*graphp.Node{resp.GetN()[0]},
 	}

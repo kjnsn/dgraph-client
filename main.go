@@ -46,5 +46,5 @@ func (c *Connection) QueryVariables(query string, variables map[string]string) (
 	if err != nil {
 		return nil, err
 	}
-	return ReadResponse(resp), nil
+	return readResponse(resp), nil
 }
